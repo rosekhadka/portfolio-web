@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000, #0a0a0a);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #00f7ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f7ff;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero span {
+    color: #00f7ff;
+}
+
+.typing {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00f7ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Skills */
+.skills span {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 18px;
+    border: 1px solid #00f7ff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00f7ff;
+    color: black;
+}
+
+/* Projects */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #111;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        height: 100vh;
+        width: 200px;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+}
