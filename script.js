@@ -3,7 +3,7 @@ const text = [
     "Student",
     "Future Developer",
     "Tech Enthusiast",
-    "Dreaming Big 🚀"
+    "Dreaming Big"
 ];
 
 let i = 0;
@@ -13,6 +13,7 @@ let deleting = false;
 
 function type() {
     const el = document.querySelector(".typing");
+    if (!el) return;
 
     if (!deleting && j <= text[i].length) {
         current = text[i].substring(0, j++);
@@ -22,26 +23,41 @@ function type() {
 
     el.innerHTML = current;
 
-    if (j === text[i].length) {
+    // Pause at the end of a word
+    if (j === text[i].length + 1) {
         deleting = true;
-        setTimeout(type, 1000);
+        setTimeout(type, 1500); 
         return;
     }
 
-    if (j === 0) {
+    // Move to next word
+    if (j === 0 && deleting) {
         deleting = false;
         i = (i + 1) % text.length;
+        setTimeout(type, 500); 
+        return;
     }
 
     setTimeout(type, deleting ? 50 : 100);
 }
 
-type();
+// Initialize typing effect on load
+document.addEventListener("DOMContentLoaded", type);
 
-// Hamburger Menu
+// Hamburger Menu Logic
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (hamburger && navLinks) {
+    // Toggle menu
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+    
+    // Close menu when a link is clicked (Mobile Fix)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+}
