@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rose Khadka</title>
+    <title>COMRADE (Rose Khadka)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
+<div class="scanlines"></div>
+
 <nav>
-    <h2 class="logo">Rose</h2>
+    <h2 class="logo">root@rose:~#</h2>
 
     <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">./home</a></li>
+        <li><a href="#about">./about</a></li>
+        <li><a href="#projects">./projects</a></li>
+        <li><a href="#contact">./contact</a></li>
     </ul>
 
-    <!-- Hamburger -->
     <div class="hamburger">
         <span></span>
         <span></span>
@@ -27,63 +27,70 @@
     </div>
 </nav>
 
-<!-- Hero -->
-<section id="home" class="hero">
-    <h1>Hi, I'm <span>Rose Khadka</span></h1>
-    <h2 class="typing"></h2>
-    <a href="#contact" class="btn">Contact Me</a>
-</section>
+<main>
+    <section id="home" class="hero">
+        <div class="terminal-block">
+            <p class="command">&gt; whoami</p>
+            <h1>ROSE KHADKA</h1>
+            <p class="subtitle">aka <span class="typing">COMRADE</span>NMERCY<span class="cursor">_</span></p>
+        </div>
+    </section>
 
-<!-- About -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        A class nine student interested in web development, aerospace engineering, electronics,
-        hacking, programming, and physics. Studying in Shivagadhi English School,
-        learning new things and staying self disciplined.
-    </p>
-
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>C</span>
-        <span>C++</span>
-    </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-container">
-        <div class="project-card">
-            <h3>Calculator App</h3>
-            <p>Simple calculator built with JavaScript.</p>
+    <section id="about">
+        <p class="command">&gt; cat about.txt</p>
+        <h2>ABOUT ME</h2>
+        <div class="terminal-text">
+            <p>$ age: 15</p>
+            <p>$ education: class 9 student @ Shivagadhi English School</p>
+            <p>$ interests: web dev, aerospace, electronics, hacking, programming, physics</p>
+            <p>$ status: learning new things and staying self-disciplined</p>
         </div>
 
-        <div class="project-card">
-            <h3>To-Do List</h3>
-            <p>Task manager with interactive UI.</p>
+        <p class="command mt-2">&gt; ls ./skills</p>
+        <div class="skills">
+            <span>[HTML]</span>
+            <span>[CSS]</span>
+            <span>[JavaScript]</span>
+            <span>[Python]</span>
+            <span>[C]</span>
+            <span>[C++]</span>
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Responsive personal portfolio design.</p>
+    <section id="projects">
+        <p class="command">&gt; ls -la ./projects</p>
+        <h2>PROJECTS</h2>
+
+        <div class="project-container">
+            <div class="project-card">
+                <h3>&gt; calc.exe</h3>
+                <p>Simple calculator built with JavaScript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>&gt; tasks.sh</h3>
+                <p>Task manager with interactive UI.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>&gt; portfolio.html</h3>
+                <p>Responsive personal portfolio design.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p <a href="mailto:rosekhadka668@gmail.com">📧 rosekhadka668@gmail.com</a></p>
-    <p><a href="https://github.com/rosekhadka">💻 github.com/rosekhadka</a></p>
-</section>
+    <section id="contact">
+        <p class="command">&gt; ping contact_info</p>
+        <h2>CONTACT</h2>
+        <div class="contact-info">
+            <p>$ email: <a href="mailto:rosekhadka668@gmail.com">rosekhadka668@gmail.com</a></p>
+            <p>$ github: <a href="https://github.com/rosekhadka">github.com/rosekhadka</a></p>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>© 2026 Rose Khadka</p>
+    <p>root@rose:~$ exit // © 2026 Rose Khadka</p>
 </footer>
 
 <script src="script.js"></script>
